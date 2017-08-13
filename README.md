@@ -9,7 +9,7 @@
 
 ### Usage：
 
-下载[本项目][6]到本地，打开项目主目录，打开命令行，输入：
+下载本项目到本地，打开项目主目录，打开命令行，输入：
 
 ```bash
 git clone https://github.com/sonnyhcl/wxImage.git
