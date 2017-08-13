@@ -1,15 +1,21 @@
 
 # coding: utf-8
 
-# In[1]:
+# In[ ]:
 
 
 import os
 import math
 import itchat
 import PIL.Image as Image
+import platform
 
-itchat.auto_login(hotReload=True)
+if platform.system() == 'Linux':
+    enableCmdQR = True
+else:
+    enableCmdQR = False
+
+itchat.auto_login(enableCmdQR=enableCmdQR, hotReload=True)
 
 friends = itchat.get_friends(update=True)
 username = friends[0]["UserName"]
@@ -22,7 +28,7 @@ if not os.path.exists(username):
 print("itchat login done...")
 
 
-# In[2]:
+# In[ ]:
 
 pics = os.listdir(username)
 numPic = len(pics)
@@ -33,7 +39,7 @@ numline = int(640 / eachsize)
 toImage = Image.new('RGB', (int(numline * eachsize), int(numPic / numline * eachsize)))
 
 
-# In[3]:
+# In[ ]:
 
 for i, pic in enumerate(pics):
     try:
@@ -49,7 +55,7 @@ for i, pic in enumerate(pics):
 toImage.save(username + ".png")
 
 
-# In[4]:
+# In[ ]:
 
 itchat.send_image(username + ".png", 'filehelper')
 

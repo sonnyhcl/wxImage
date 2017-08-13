@@ -89,3 +89,4 @@ ENV/
 @*
 .ipynb_checkpoints/*
 itchat.pkl
+QR*
