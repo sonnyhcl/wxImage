@@ -1,6 +1,6 @@
 # Wechat friends' avatars in one picture using itchat and pillow
 
->   fork from [https://github.com/gzm1997/wxImage][https://github.com/gzm1997/wxImage]
+>   fork from [https://github.com/gzm1997/wxImage](https://github.com/gzm1997/wxImage)
 
 #### Improvement:
 
